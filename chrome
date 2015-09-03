@@ -24,6 +24,11 @@ elif [ "$1" = "blog" ];then
 	echo "Opening blog"
 	google-chrome https://compsciworld.wordpress.com/
 	exit
+elif [ "$1" = "github" ];then
+	echo "Github : Enter Username"
+	read username
+	google-chrome https://github.com/"$username"
+	exit
 else
 	echo "Opening google search"
 	echo "Google : Enter search term"
