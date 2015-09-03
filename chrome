@@ -1,0 +1,36 @@
+#!/bin/sh
+
+
+##This script creates terminal shortcuts for frequently visited sites by me.
+#echo "$0"
+if [ "$1" = "linkedin" ];then
+	echo "Opening linkedin"
+	google-chrome https://www.linkedin.com/ 
+	exit
+elif [ "$1" = "gmail" ];then
+	echo "Opening your mail"
+	google-chrome https://mail.google.com/mail/u/0/#inbox
+	exit
+elif [ "$1" = "youtube" ];then
+	echo "Youtube : Enter search term"
+	read query
+	google-chrome https://www.youtube.com/results?search_query="$query"
+	exit
+elif [ "$1" = "facebook" ];then
+	echo "Opening facebook"
+	google-chrome https://www.facebook.com 
+	exit
+elif [ "$1" = "blog" ];then
+	echo "Opening blog"
+	google-chrome https://compsciworld.wordpress.com/
+	exit
+else
+	echo "Opening google search"
+	echo "Google : Enter search term"
+	read query
+	google-chrome https://www.google.com/search?q="$query"
+	exit
+fi
+
+
+
