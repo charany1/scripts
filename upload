@@ -1,0 +1,1 @@
+curl -v -u charany1 -X POST  https://api.bitbucket.org/2.0/repositories/dev_digimpact/digimpact_mvp/downloads -F files=@app/build/outputs/apk/app-debug.apk           
